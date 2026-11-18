@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "concept-bilstm-urer"
+version = "1.0.0"
+description = "Concept-Grounded Evidential Regression for Trustworthy Anti-Collapse Chinese Dimensional Sentiment Analysis"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+keywords = ["dimensional-sentiment-analysis", "concept-bottleneck-models", "evidential-deep-learning", "conformal-prediction", "bilstm"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]

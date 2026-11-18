@@ -1,0 +1,21 @@
+{
+  "sampler": "BoTorchSampler_fast_qLogEHVI",
+  "n_trials": 24,
+  "knee_trial": 12,
+  "knee_objectives": {
+    "composite_err_ccc": 0.9573319351437938,
+    "winkler_90": 2.1565782604426365,
+    "latency_ms": 2.0710170138045214
+  },
+  "knee_params": {
+    "lr": 0.0004999999999999999,
+    "lora_rank": 16,
+    "bilstm_hidden": 64,
+    "dropout": 0.1,
+    "lambda_ccc": 0.1,
+    "lambda_reg": 0.1367693700042021,
+    "lambda_concept_align": 0.15,
+    "eta_epi": 0.898495887844254,
+    "eta_ale": 0.9999999999999999
+  }
+}

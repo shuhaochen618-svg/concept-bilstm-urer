@@ -1,0 +1,42 @@
+project_name: concept_bilstm_urer
+
+datasets:
+  dimabsa2026_zho:
+    domains: ["zho_rest", "zho_lap", "zho_fin", "zho_env"]
+    cal_ratio: 0.15
+    cal_split_seed: 42
+    scale_min: 1.0
+    scale_max: 9.0
+  brighter_chn:
+    emotions: ["anger", "disgust", "fear", "joy", "sadness", "surprise"]
+    cal_ratio: 0.15
+    cal_split_seed: 42
+    scale_min: 0.0
+    scale_max: 3.0
+  logic_sentiment:
+    types: ["简单句", "转折", "双重否定", "反讽"]
+    cal_ratio: 0.15
+
+backbones:
+  primary: "hfl/chinese-macbert-base"
+  secondary: "hfl/chinese-roberta-wwm-ext"
+  deberta_alt: "IDEA-CCNL/Erlangshen-DeBERTa-v2-97M-Chinese"
+  llm_zero_shot: "Qwen/Qwen2.5-3B-Instruct"
+
+training:
+  seeds: [42, 102, 202, 302, 402]
+  max_length: 256
+  batch_size: 32
+  epochs: 12
+  patience: 4
+  warmup_epochs: 2
+  conformal_alpha: 0.10
+  noise_levels: [0.0, 0.10, 0.20]
+
+mobo:
+  n_trials: 24
+  n_startup: 8
+  proxy_epochs: 5
+  warmup_epochs: 1
+  objectives: ["composite_err_ccc", "winkler_90", "latency_ms"]
+  reference_knee_config: "configs/trial12_knee.json"

@@ -1,0 +1,30 @@
+# Python caches & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Experiment outputs & generated figures (created at runtime)
+outputs/
+
+# Model checkpoints & HF caches (large binaries)
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+hf_cache/
+ms_cache/
+
+# Raw third-party datasets (subject to upstream licenses)
+data/raw/*
+!data/raw/.gitkeep
+
+# Temporary logs & IDE metadata
+*.tmp
+.DS_Store
+.vscode/
+.idea/
+.pytest_cache/

@@ -1,0 +1,29 @@
+# Core Deep Learning & Transformers
+torch>=2.2.0
+transformers>=4.40.0
+peft>=0.10.0
+accelerate>=0.29.0
+
+# Explainability & Chinese NLP
+captum>=0.7.0
+jieba>=0.42.1
+opencc-python-reimplemented>=0.1.7
+
+# Multi-Objective Bayesian Optimization (qLogEHVI & fANOVA)
+optuna>=3.5.0
+optuna-integration>=3.5.0
+botorch>=0.10.0
+gpytorch>=1.11
+
+# Scientific Computing & Data I/O
+numpy>=1.24.0
+pandas>=2.0.0
+pyarrow>=12.0.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+pyyaml>=6.0
+
+# Publication Figures & Utilities
+matplotlib>=3.7.0
+seaborn>=0.12.0
+tqdm>=4.66.0
